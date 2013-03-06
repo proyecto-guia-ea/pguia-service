@@ -119,6 +119,8 @@ public class Course {
 			for(Course course: courses)
 				System.out.println(course);
 			
+			System.out.println(Course.toJSONVector(courses));
+			
 		} catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

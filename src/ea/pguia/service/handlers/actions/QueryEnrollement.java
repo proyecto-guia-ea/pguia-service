@@ -20,7 +20,7 @@ public class QueryEnrollement extends Handler {
 		Statement statement = null;
 		
 		// Getting parameters
-		String name = (String) request.getSession().getAttribute("username");
+		String name = (String) request.getSession().getAttribute("name");
 		String password = request.getParameter("password");
 		if(name == null || password == null)
 			throw new HandlerException(400, "Missing parameter in " + this.getClass().getSimpleName());

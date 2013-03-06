@@ -71,12 +71,12 @@ public class Enrollement {
 			
 			// Setup the connection with the DB
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/pguia?autoReconnect=true", "root", "mimara");
-
-		
 			
 			en = Enrollement.fromDB("fernando", connection);
 			for(Course course: en.courses)
 				System.out.println(course);
+			
+			System.out.println(en.toJSON());
 			
 		} catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block
