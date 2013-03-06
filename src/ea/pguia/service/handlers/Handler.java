@@ -63,22 +63,30 @@ public abstract class Handler {
 				result = new ConfirmPasswordResult(false, "Incorrect password.", null);
 		} else 
 			result = new ConfirmPasswordResult(false, "The account doesn't exist.", null);
-			
+		
+		try {			
+			resultSet.close();	
+		} catch (SQLException e) {
+		}
+		
 		return result;
 	}
 	
 	protected Boolean isAdmin(String name, Connection connection , Statement statement) throws SQLException, HandlerException {
 		boolean enterprise;	
 		
-		ResultSet resultSet = statement.executeQuery("select admin from user " +
-				"where username='" + name + "';");	
+		ResultSet resultSet = statement.executeQuery("select admin from STUDENTS " +
+				"where name='" + name + "';");	
 		
 		if(resultSet.next())
 			enterprise = resultSet.getBoolean("admin");
 		else 
 			throw new HandlerException(401, "Auth needed.");	
 		
-		resultSet.close();
+		try {		
+			resultSet.close();				
+		} catch (SQLException e) {
+		}
 		
 		return enterprise;		
 	}
