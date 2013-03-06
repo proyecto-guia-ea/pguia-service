@@ -22,7 +22,7 @@ public class Course {
 		this.id = id;
 		this.subject = subject;
 		this.date = date;
-		this.mark = -1;
+		this.mark = 0;
 		this.enabled = enabled;		
 	}
 	
@@ -58,8 +58,8 @@ public class Course {
 		return new Gson().fromJson(json, Course.class);
 	}
 	
-	public static String toJSONVector(Course[] events) {
-		return new Gson().toJson(events);
+	public static String toJSONVector(Course[] courses) {
+		return new Gson().toJson(courses);
 	}
 	
 	public static Course[] fromJSONVector(String json) {

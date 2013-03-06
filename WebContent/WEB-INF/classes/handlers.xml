@@ -13,6 +13,14 @@
 	
 	<!-- This Service Specific Actions -->
 	<handler auth="true">
+		<action>querycourses</action>
+		<handler-class>QueryCourses</handler-class>
+	</handler>
+	<handler auth="true">
+		<action>joincourse</action>
+		<handler-class>JoinCourse</handler-class>
+	</handler>
+	<handler auth="true">
 		<action>queryenrollement</action>
 		<handler-class>QueryEnrollement</handler-class>
 	</handler>
