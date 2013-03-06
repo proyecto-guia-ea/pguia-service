@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Context>
+<Context path="/pguia-service" docBase="pguia-service"
+	reloadable="true" crossContext="true">
+	<Resource name="jdbc/PguiaDB" auth="Container" type="javax.sql.DataSource"
+		maxActive="10" maxIdle="5" username="root" password="mimara"
+		driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/pguia?autoReconnect=true" />
+</Context>

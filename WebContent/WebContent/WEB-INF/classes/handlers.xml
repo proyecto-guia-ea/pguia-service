@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE handlers>
+<handlers>
+	<!-- Comune Actions -->
+	<handler>
+		<action>checkuser</action>
+		<handler-class>CheckUserHandler</handler-class>
+	</handler>
+	<handler>
+		<action>login</action>
+		<handler-class>LoginHandler</handler-class>
+	</handler>
+	<handler auth="true">
+		<action>logout</action>
+		<handler-class>LogoutHandler</handler-class>
+	</handler>
+	<handler>
+		<action>register</action>
+		<handler-class>RegisterHandler</handler-class>
+	</handler>
+	<handler>
+		<action>checkusername</action>
+		<handler-class>CheckUsernameHandler</handler-class>
+	</handler>
+	<handler auth="true">
+		<action>changepassword</action>
+		<handler-class>ChangePasswordHandler</handler-class>
+	</handler>
+	<handler auth="true">
+		<action>decline</action>
+		<handler-class>DeclineHandler</handler-class>
+	</handler>
+
+	<!-- This Service Specific Actions -->
+	<handler auth="true">
+		<action>updatetags</action>
+		<handler-class>UpdateTagsHandler</handler-class>
+	</handler>
+	<handler auth="true" profile="Enterprise">
+		<action>sendevent</action>
+		<handler-class>SendEventHandler</handler-class>
+	</handler>
+	<handler auth="true" profile="Enterprise">
+		<action>queryassists</action>
+		<handler-class>QueryAssistsHandler</handler-class>
+	</handler>
+	<handler auth="true" profile="Client">
+		<action>confirmassist</action>
+		<handler-class>ConfirmAssistHandler</handler-class>
+	</handler>
+	<handler auth="true">
+		<action>queryevents</action>
+		<handler-class>QueryEventsHandler</handler-class>
+	</handler>
+	<handler auth="true" profile="Client">
+		<action>queryoldevents</action>
+		<handler-class>QueryOldEventsHandler</handler-class>
+	</handler>
+</handlers>
